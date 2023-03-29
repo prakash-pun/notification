@@ -35,10 +35,22 @@ limitations under the License.
   <button class="js-notify-btn">Notify me!</button>
   <button disabled class="js-push-btn">Enable Push Messaging</button><br><br>
   <section class="js-sub-endpoint" style="display:none;width:80%">
-    <h3>Subscription Object:</h3>
-    <code class="js-subscription-json"></code><br><br><br>
-    <h3>Endpoint URL:</h3>
-    <code class="js-endpoint-url"></code>
+    <details>
+      <summary style="cursor: pointer">
+        Subscription Object:
+      </summary>
+      <div>
+        <code class="js-subscription-json"></code><br><br><br>
+      </div>
+    </details>
+    <details>
+      <summary style="cursor: pointer">
+        Endpoint URL:
+      </summary>
+      <div>
+        <code class="js-endpoint-url"></code>
+      </div>
+    </details>
   </section>
 
   <!-- Include script -->
