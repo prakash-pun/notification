@@ -1,20 +1,20 @@
 /*
-Copyright 2018 Google Inc.
+  Copyright 2018 Google Inc.
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+  http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
 */
 // PushSubscription {endpoint: "https://fcm.googleapis.com/fcm/send/dKaAneiHlqY:AP…YTv61tRW8YwlBA9DCJSPIRkSmEw_6eHMDRoaiahDsoqI2L2Ib", expirationTime: null, options: PushSubscriptionOptions}
-const webPush = require('web-push');
+const webPush = require("web-push");
 
 const pushSubscription = {
   endpoint:
@@ -27,15 +27,14 @@ const pushSubscription = {
   },
 };
 
-
 const vapidPublicKey =
-"BKOzlja6y2OWQ5biN4KZvBc537l0R3yvfJsjWUIy6k9jm8OoqsXCU9-OkGzMR_iT7D-t4c6dU8cghn0UEkAN4tA";
+  "BKOzlja6y2OWQ5biN4KZvBc537l0R3yvfJsjWUIy6k9jm8OoqsXCU9-OkGzMR_iT7D-t4c6dU8cghn0UEkAN4tA";
 const vapidPrivateKey = "9B75uwivLdzJL1jZkX-IcCVouYPkQqa6zV7RnIABiqI";
 
-const payload = 'Here is a payload!';
+const payload = "Here is a payload!";
 
 const options = {
-//  gcmAPIKey: "YOUR_SERVER_KEY",
+  //  gcmAPIKey: "YOUR_SERVER_KEY",
   TTL: 60,
 
   vapidDetails: {
@@ -45,8 +44,4 @@ const options = {
   },
 };
 
-webPush.sendNotification(
-  pushSubscription,
-  payload,
-  options
-);
+webPush.sendNotification(pushSubscription, payload, options);
